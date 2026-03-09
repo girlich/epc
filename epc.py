@@ -5,7 +5,7 @@ import sys
 
 def parse_epc_string(epc_data):
     # split lines
-    lines = epc_data.strip().split('\n')
+    lines = epc_data.strip().splitlines()
     
     # Mapping character set
     encoding_map = {
