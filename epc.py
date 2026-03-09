@@ -46,5 +46,12 @@ def parse_epc_string(epc_data):
         }
     }
 
-    return json.dumps(parsed_data, indent=4, ensure_ascii=False)
+    return parsed_data
 
+def main():
+    raw = sys.stdin.read().strip()
+    parsed_data = parse_eps_string(raw)
+    print(json.dumps(parsed_data, indent=4, ensure_ascii=False)
+
+if __name__ == "__main__":
+    main()
