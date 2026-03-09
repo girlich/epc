@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import json
+import sys
 
 def parse_epc_string(epc_data):
     # split lines
@@ -50,8 +51,8 @@ def parse_epc_string(epc_data):
 
 def main():
     raw = sys.stdin.read().strip()
-    parsed_data = parse_eps_string(raw)
-    print(json.dumps(parsed_data, indent=4, ensure_ascii=False)
+    parsed_data = parse_epc_string(raw)
+    print(json.dumps(parsed_data, indent=4, ensure_ascii=False))
 
 if __name__ == "__main__":
     main()
